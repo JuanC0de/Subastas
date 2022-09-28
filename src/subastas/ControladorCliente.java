@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * Manipular información de los clientes
  */
 public class ControladorCliente {
-    private ArrayList<Cliente> Clientes= new ArrayList();
+    private static ArrayList<Cliente> Clientes= new ArrayList();
 
     //Método que crea un nuevo Cliente y lo agrega a la lista
     public void CrearCliente(String nombre, long cedula, long telefono, String direccion, int edad, String correo) {
