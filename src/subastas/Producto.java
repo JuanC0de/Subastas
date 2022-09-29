@@ -20,7 +20,7 @@ public class Producto {
     private String clienteCompra;
     private ArrayList<String[ ]> historialSubasta = new ArrayList<String[ ] >();
 
-    public Producto(String nombre, float valorInicial, String fechaPublicacion, String descripcion, String fechaCompra, String clienteCompra) {
+    public Producto(String Codigo,String nombre, float valorInicial, String fechaPublicacion, String descripcion, String fechaCompra, String clienteCompra) {
         this.codigo= codigo;
         this.nombre = nombre;
         this.valorInicial = valorInicial;

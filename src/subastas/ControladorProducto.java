@@ -13,7 +13,23 @@ public class ControladorProducto {
 
     private static ArrayList<Producto> Productos= new ArrayList();
     
-    
+    public boolean EditarProducto(String codigo,String nombre, float valorInicial, String fechaPublicacion, String descripcion, String fechaCompra, String clienteCompra){
+        boolean resultadoEditar= false;
+        for (Producto Producto1 : Productos) {
+            if(Producto1.getCodigo().equals(codigo)){
+                Producto1.setNombre(nombre);
+                Producto1.setValorInicial(valorInicial);
+                Producto1.setFechaPublicacion(fechaPublicacion);
+                Producto1.setDescripcion(descripcion);
+                Producto1.setFechaCompra(fechaCompra);
+                Producto1.setClienteCompra(clienteCompra);
+                resultadoEditar= true;
+                break;
+            }
+        }
+        return resultadoEditar;
+    }
+            
     /**Recibe el codigo de un producto, lo busca en la lista de Productos y si existe es eliminado
      * Retorna true si fue eliminado.
      */
