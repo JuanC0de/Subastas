@@ -13,6 +13,11 @@ public class ControladorProducto {
 
     private static ArrayList<Producto> Productos= new ArrayList();
     
+    
+    /**
+     * Método que recibe un codigo de producto
+     * Edita la información de ese producto
+     */
     public boolean EditarProducto(String codigo,String nombre, float valorInicial, String fechaPublicacion, String descripcion, String fechaCompra, String clienteCompra){
         boolean resultadoEditar= false;
         for (Producto Producto1 : Productos) {

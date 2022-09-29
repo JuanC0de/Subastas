@@ -13,7 +13,22 @@ import java.util.ArrayList;
  */
 public class ControladorCliente {
     private static ArrayList<Cliente> Clientes= new ArrayList();
-
+    
+    
+    
+    
+    /**
+     * Método que busca un cliente por cedula y se elimina de la lista de Clientes
+     */
+    public boolean EliminarCliente(long cedula){
+        boolean resultadoEliminacion= false;
+        for (Cliente Cliente1 : Clientes) {
+            if(Cliente1.getCedula()==cedula){
+                 resultadoEliminacion=Clientes.remove(Cliente1);
+            }
+        }
+        return resultadoEliminacion;
+    }
     //Método que crea un nuevo Cliente y lo agrega a la lista
     public void CrearCliente(String nombre, long cedula, long telefono, String direccion, int edad, String correo) {
         Cliente nuevoCliente= new Cliente( nombre, cedula, telefono, direccion, edad, correo);
