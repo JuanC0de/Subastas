@@ -27,21 +27,42 @@ public class SubastasProductos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JT_Regresar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        JT_Regresar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        JT_Regresar.setText("Regresar");
+        JT_Regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JT_RegresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(550, Short.MAX_VALUE)
+                .addComponent(JT_Regresar)
+                .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(JT_Regresar)
+                .addContainerGap(525, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JT_RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_RegresarActionPerformed
+        MenuFunciones venClientes = new MenuFunciones();
+        venClientes.setVisible(true);
+    }//GEN-LAST:event_JT_RegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +100,6 @@ public class SubastasProductos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JT_Regresar;
     // End of variables declaration//GEN-END:variables
 }

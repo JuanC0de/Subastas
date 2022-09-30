@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author Luisa Castibolanco
  * fecha: 27/09/22
  * funcion: Creacion del controlador producto.
- */
+ 
 public class ControladorProducto {
 
     private static ArrayList<Producto> Productos= new ArrayList();
@@ -16,7 +16,7 @@ public class ControladorProducto {
     
     /**Recibe el codigo de un producto, lo busca en la lista de Productos y si existe es eliminado
      * Retorna true si fue eliminado.
-     */
+     
     public boolean EliminarProducto(String codigo){
         boolean resultadoEliminacion= false;
         for (Producto Producto1 : Productos) {
@@ -37,3 +37,4 @@ public class ControladorProducto {
         return Productos;
     }
 }
+*/
