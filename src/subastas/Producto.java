@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * funcion: creacion de metodos y atributos de la clase productos
  */
 public class Producto {
+    private String codigo;
     private String nombre;
     private float valorInicial;
     private String fechaPublicacion;
@@ -19,7 +20,8 @@ public class Producto {
     private String clienteCompra;
     private ArrayList<String[ ]> historialSubasta = new ArrayList<String[ ] >();
 
-    public Producto(String nombre, float valorInicial, String fechaPublicacion, String descripcion, String fechaCompra, String clienteCompra) {
+    public Producto(String Codigo,String nombre, float valorInicial, String fechaPublicacion, String descripcion, String fechaCompra, String clienteCompra) {
+        this.codigo= codigo;
         this.nombre = nombre;
         this.valorInicial = valorInicial;
         this.fechaPublicacion = fechaPublicacion;
@@ -81,6 +83,14 @@ public class Producto {
 
     public void setClienteCompra(String clienteCompra) {
         this.clienteCompra = clienteCompra;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
     
     
