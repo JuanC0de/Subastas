@@ -18,7 +18,7 @@ public class Producto {
     private String descripcion;
     private String fechaCompra;
     private String clienteCompra;
-    private ArrayList<String[ ]> historialSubasta = new ArrayList<String[ ] >();
+    private ArrayList<String[]> historialSubasta = new ArrayList<String[]>();
 
     public Producto(String Codigo,String nombre, float valorInicial, String fechaPublicacion, String descripcion, String fechaCompra, String clienteCompra) {
         this.codigo= codigo;
@@ -28,6 +28,12 @@ public class Producto {
         this.descripcion = descripcion;
         this.fechaCompra = fechaCompra;
         this.clienteCompra = clienteCompra;
+    }
+    
+    
+    //Método que recibe un Array y lo agrega al array de historial
+    public void agregarCliente(String[] nuevoCliente){
+        historialSubasta.add(nuevoCliente);
     }
     
     public ArrayList<String[]> getHistorialSubasta() {

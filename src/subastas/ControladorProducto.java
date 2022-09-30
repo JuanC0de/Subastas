@@ -14,6 +14,27 @@ public class ControladorProducto {
     private static ArrayList<Producto> Productos= new ArrayList();
     
     
+    
+    /**
+     * Método que recibe 4 valores y los agrega al Producto
+     */
+    public boolean agregarNuevoCliente(String codigo,String NombreCliente, float ValorSubastaProducto, String horaFecha){
+        boolean resultadoEditar= false;
+        for (Producto Producto1 : Productos) {
+            if(Producto1.getCodigo().equals(codigo)){
+                String [] nuevoCliente=new String[3];
+                nuevoCliente[0]=NombreCliente;
+                nuevoCliente[1]= Float.toString(ValorSubastaProducto);
+                nuevoCliente[2]= horaFecha;
+                Producto1.agregarCliente(nuevoCliente);
+                resultadoEditar= true;
+                break;
+            }
+        }
+        return resultadoEditar;
+        
+    }
+    
     /**
      * Método que recibe un codigo de producto
      * Edita la información de ese producto
@@ -43,6 +64,8 @@ public class ControladorProducto {
         for (Producto Producto1 : Productos) {
             if(Producto1.getCodigo().equals(codigo)){
                  resultadoEliminacion=Productos.remove(Producto1);
+                 resultadoEliminacion= true;
+                 break;
             }
         }
         return resultadoEliminacion;

@@ -14,8 +14,22 @@ import java.util.ArrayList;
 public class ControladorCliente {
     private static ArrayList<Cliente> Clientes= new ArrayList();
     
-    
-    
+    public boolean EditarCliente( String nombre, long cedula, long telefono, String direccion, int edad, String correo){
+        boolean resultadoEliminacion= false;
+        for (Cliente Cliente1 : Clientes) {
+            if(Cliente1.getCedula()==cedula){
+                Cliente1.setNombre(nombre);
+                Cliente1.setCedula(cedula);
+                Cliente1.setTelefono(telefono);
+                Cliente1.setDireccion(direccion);
+                Cliente1.setEdad(edad);
+                Cliente1.setCorreo(correo);
+                resultadoEliminacion= true;
+                break;
+            }
+        }
+        return resultadoEliminacion;
+    }
     
     /**
      * Método que busca un cliente por cedula y se elimina de la lista de Clientes
